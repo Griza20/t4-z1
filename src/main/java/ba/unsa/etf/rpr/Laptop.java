@@ -1,10 +1,12 @@
 package ba.unsa.etf.rpr;
 
+import java.util.ArrayList;
+
 /**
  * Hello world!
  *
  */
-public class Laptop {
+public class Laptop implements LaptopDao{
     private String brend;
     private String model;
     private String procesor;
@@ -85,4 +87,28 @@ public class Laptop {
     }
 
 
+    @Override
+    public void dodajLaptopUListu(Laptop laptop) {
+
+    }
+
+    @Override
+    public void dodajLaptopUFile(Laptop laptop) {
+
+    }
+
+    @Override
+    public Laptop getLaptop(String procesor) {
+        return null;
+    }
+
+    @Override
+    public void napuniListu(ArrayList<Laptop> laptopi) {
+
+    }
+
+    @Override
+    public void vratiPodatkeIzDatoteke() {
+
+    }
 }

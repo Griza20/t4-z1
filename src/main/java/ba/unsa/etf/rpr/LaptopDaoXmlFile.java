@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
@@ -46,6 +47,9 @@ public class LaptopDaoXmlFile implements LaptopDao{
 
     @Override
     public ArrayList<Laptop> vratiPodatkeIzDatoteke() throws IOException {
-        return null;
+        ArrayList<Laptop> l = new ArrayList<>();
+        XmlMapper m = new XmlMapper();
+        l = m.readValue(file, new TypeReference<ArrayList<Laptop>>(){});
+        return l;
     }
 }
